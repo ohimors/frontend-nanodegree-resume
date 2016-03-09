@@ -212,3 +212,7 @@ span {
     display: block;
   }
 }
+
+.resume-header{
+  background: black;
+}
