@@ -1,3 +1,9 @@
-/*
-This is empty on purpose! Your code to build the resume will go here.
- */
+/**
+* @description Represents a book
+* @constructor
+* @param {string} title - The title of the book
+* @param {string} author - The author of the book
+*/
+function Resume() {
+
+}

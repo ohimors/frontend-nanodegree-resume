@@ -214,5 +214,11 @@ span {
 }
 
 .resume-header{
-  background: black;
+  background: center/cover;
+  background-color:rgba(0, 0, 0, 0.75);
+  height: 100%;
+}
+
+#headerName, #topContacts {
+  min-width: 100%;
 }

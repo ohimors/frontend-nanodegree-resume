@@ -8,43 +8,56 @@
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="https://code.getmdl.io/1.1.1/material.indigo-pink.min.css">
-  <script src="js/jQuery.js"></script>
-  <script src="js/helper.js"></script>
-
   <script type="text/javascript" src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
   <script defer src="https://code.getmdl.io/1.1.1/material.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <script src="js/helper.js"></script>
   <link href="css/style.css" rel="stylesheet">
   <link rel="import" href="elements/project-card.html">
   <!-- <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script> -->
 </head>
 <body>
-  <div id="main">
-    <div id="header" class="demo-layout-transparent mdl-layout mdl-js-layout">
-
-    </div>
-    <div class="mdl-layout__header-row mdl-cell mdl-cell--12-col resume-header">
-        <ul id="topContacts" class="flex-box">Top Contacts</ul>
+  <header class="mdl-layout resume-header">
+        <div class="mdl-layout__header-row mdl-cell mdl-cell--12-col"></div>
+       <div class="mdl-layout__header-row mdl-cell mdl-cell--12-col">
+         <div id="headerName"><h1 id="name">Stephen Pearl</h1><span>Web Developer</span><hr></div>
       </div>
-    <div style="clear: both;"></div>
-    <div id="workExperience" class="gray">
-      <h2>Work Experience</h2>
-    </div>
-    <div id="projects">
+      <div class="mdl-layout__header-row mdl-cell mdl-cell--12-col">
+        <ul id="topContacts" class="flex-box">
+          <li class="flex-item"><span class="orange-text">Stephen Pearl</span><span class="white-text">Web Developer</span></li>
+          <li class="flex-item"><span class="orange-text">mobile</span><span class="white-text">555-555-5555</span></li>
+          <li class="flex-item"><span class="orange-text">email</span><span class="white-text">pearls@gmail.com</span></li>
+          <li class="flex-item"><span class="orange-text">twitter</span><span class="white-text">@wildmind</span></li>
+          <li class="flex-item"><span class="orange-text">github</span><span class="white-text">cerberusaeon</span></li>
+          <li class="flex-item"><span class="orange-text">location</span><span class="white-text">Washington D.C.</span></li>
+        </ul>
+      </div>
+    </header>
+  <main id="main">
+    <section id="workExperience" class="gray">
+        <h2>Work Experience</h2>
+    </section>
+    <section id="projects">
       <h2>Projects</h2>
-    </div>
-    <div id="education" class="gray">
+    </section>
+    <section id="education" class="gray">
       <h2>Education</h2>
-    </div>
-    <div id="mapDiv">
+    </section>
+    <section id="mapDiv">
       <h2>Where I've Lived and Worked</h2>
-    </div>
-    <div id="lets-connect" class="dark-gray">
+    </section>
+    <section id="lets-connect" class="dark-gray">
       <h2 class="orange center-text">Let's Connect</h2>
         <ul id="footerContacts" class="flex-box">
+          <li class="flex-item"><span class="orange-text">Stephen Pearl</span><span class="white-text">Web Developer</span></li>
+          <li class="flex-item"><span class="orange-text">mobile</span><span class="white-text">555-555-5555</span></li>
+          <li class="flex-item"><span class="orange-text">email</span><span class="white-text">pearls@gmail.com</span></li>
+          <li class="flex-item"><span class="orange-text">twitter</span><span class="white-text">@wildmind</span></li>
+          <li class="flex-item"><span class="orange-text">github</span><span class="white-text">cerberusaeon</span></li>
+          <li class="flex-item"><span class="orange-text">location</span><span class="white-text">Washington D.C.</span></li>
       </ul>
-    </div>
-  </div>
+    </section>
+  </main>
 
   <!--
   The next line tells the browser where to download the JavaScript file you'll be
@@ -76,8 +89,7 @@
         an opening and closing set of slash asterisks for block comments.
     */
 
-
-    if(document.getElementsByClassName('flex-item').length === 0) {
+    /*if(document.getElementsByClassName('flex-item').length === 0) {
       document.getElementById('topContacts').style.display = 'none';
     }
     if(document.getElementsByTagName('h1').length === 0) {
@@ -97,7 +109,7 @@
     }
     if(document.getElementById('map') === null) {
       document.getElementById('mapDiv').style.display = 'none';
-    }
+    }*/
   </script>
 </body>
 </html>
