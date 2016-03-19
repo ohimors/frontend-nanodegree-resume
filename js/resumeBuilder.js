@@ -17,7 +17,7 @@ var bio = {
     },
     welcomeMessage: "Welcome to Wildmind.",
     skills: "Shadow Dom expert and passive cake eater",
-    biopic: "/images/my_picture.jpg",
+    biopic: "images/my_picture.jpg",
     display: function(){
 
     }
@@ -73,27 +73,33 @@ var projects = {
 }
 
 $(document).ready(function(){
-    var headerName = HTMLheaderName.replace("%data%", bio.name);
-    var headerRole = HTMLheaderRole.replace("%data%", bio.role);
-    var contactGeneric = HTMLcontactGeneric.replace("%data%", bio.name);
-    var mobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
-    var email = HTMLemail.replace("%data%", bio.contacts.email);
-    var twitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
-    var github = HTMLgithub.replace("%data%", bio.contacts.github);
-    var bioPic = HTMLbioPic.replace("%data%", "WHAT THE FUCK");
-    //not using this element
-    //var blog = HTMLbog("%data", bio.contacts.blog);
-    var location = HTMLlocation.replace("%data%", bio.contacts.location);
+    var job = new Job("employer1", "title1", "Washington d.c.", "2008-10-10", "description of job 1");
+    var project = new Project("project1","2012-05-05", "A really cool project", "images/fry.jpg");
+    work.job.add(job);
+    projects.add(project);
 
-    $("#headerName").append(headerName + headerRole);
-    $("#topContacts").append(contactGeneric);
-    $("#topContacts").append(mobile);
-    $("#topContacts").append(email);
-    $("#topContacts").append(twitter);
-    $("#topContacts").append(github);
-    $("#topContacts").append(location);
 
-    $("#biopic").innerHTML = bioPic;
-    alert("what");
+    $("#headerName").append(HTMLheaderName.replace("%data%", bio.name) + HTMLheaderRole.replace("%data%", bio.role));
+
+    $("#topContacts").append(HTMLcontactGeneric.replace("%data%", bio.name));
+    $("#topContacts").append(HTMLmobile.replace("%data%", bio.contacts.mobile));
+    $("#topContacts").append(HTMLemail.replace("%data%", bio.contacts.email));
+    $("#topContacts").append(HTMLtwitter.replace("%data%", bio.contacts.twitter));
+    $("#topContacts").append(HTMLgithub.replace("%data%", bio.contacts.github));
+    $("#topContacts").append(HTMLlocation.replace("%data%", bio.contacts.location));
+
+    $("#bioPic").append(HTMLbioPic.replace("%data%", bio.biopic));
+    $("#welcomeMsg").append(HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage));
+
+    $("#skillsStart").append(HTMLskillsStart.replace("%data%", HTMLskillsStart))
+    $("#skills").append(HTMLskills.replace("%data%", bio.skills));
+    $("#workStart").append(HTMLworkStart);
+    $("#workEmployer").append(HTMLworkEmployer.replace("%data%", work.job[0].employer ));
+    $("#workTitle").append(HTMLworkTitle.replace("%data%", work.job[0].title ));
+    $("#workDates").append(HTMLworkDates.replace("%data%", work.job[0].dates ));
+    $("#workLocation").append(HTMLworkLocation.replace("%data%", work.job[0].location ));
+    $("#workDescription").append(HTMLworkDescription.replace("%data%", work.job[0].description ));
+
+    $
 
 });
