@@ -14,35 +14,41 @@
   <script src="js/helper.js"></script>
   <link href="css/style.css" rel="stylesheet">
   <link rel="import" href="elements/project-card.html">
-  <!-- <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script> -->
+  <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
 </head>
 <body>
   <header class="mdl-layout resume-header">
-        <div class="mdl-layout__header-row mdl-cell mdl-cell--12-col"></div>
-       <div class="mdl-layout__header-row mdl-cell mdl-cell--12-col">
+    <div class="mdl-layout__header-row mdl-cell mdl-cell--12-col"></div>
+    <div class="mdl-layout__header-row mdl-cell mdl-cell--12-col">
          <div id="headerName"></div>
       </div>
-    <div id="brilliant"></div>
 
-    <div id="bioPic"></div>
-    <div id="welcomeMsg"></div>
-    <div id="skillStart"></div>
-    <div id="skills"></div>
+    <div class="mdl-grid mdl-cell--12-col">
+      <div class="mdl-cell mdl-cell--1-col"></div>
+      <div class="mdl-cell mdl-cell--4-col">
+        <div id="bioPic"></div>
+        <div id="welcomeMsg"></div>
+        <div id="skillsStart"></div>
+        <div id="skills"></div>
+      </div>
+    </div>
+
+
       <div class="mdl-layout__header-row mdl-cell mdl-cell--12-col">
         <ul id="topContacts" class="flex-box">
         </ul>
       </div>
     </header>
   <main id="main">
-    <section id="workExperience" class="gray">
-        <h2>Work Experience</h2>
-        <div id="#workEmployer">it doesn't work.</div>
+    <section id="workExperienceSection" class="gray">
+        <h2 id="workExperienceTitle">Work Experience</h2>
+
     </section>
     <section id="projects">
-      <h2>Projects</h2>
+      <h2 id="projectTitle">Projects</h2>
     </section>
     <section id="education" class="gray">
-      <h2>Education</h2>
+      <h2 id="educationTitle">Education</h2>
     </section>
     <section id="mapDiv">
       <h2>Where I've Lived and Worked</h2>

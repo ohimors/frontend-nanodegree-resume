@@ -115,6 +115,8 @@ a {
 .white-text {
   font-weight: bold;
   color: #fff;
+  padding: 0px;
+
 }
 
 .gray {
