@@ -19,6 +19,29 @@ var bio = {
     skills: "Shadow Dom expert and passive cake eater",
     biopic: "images/my_picture.jpg",
     display: function(){
+        $("#headerName").append(HTMLheaderName.replace("%data%", bio.name) + HTMLheaderRole.replace("%data%", bio.role));
+
+        $("#topContacts").append(HTMLcontactGeneric.replace("%data%", bio.name));
+        $("#topContacts").append(HTMLmobile.replace("%data%", bio.contacts.mobile));
+        $("#topContacts").append(HTMLemail.replace("%data%", bio.contacts.email));
+        $("#topContacts").append(HTMLtwitter.replace("%data%", bio.contacts.twitter));
+        $("#topContacts").append(HTMLgithub.replace("%data%", bio.contacts.github));
+        $("#topContacts").append(HTMLlocation.replace("%data%", bio.contacts.location));
+
+        $("#bioPic").append(HTMLbioPic.replace("%data%", bio.biopic));
+        $("#welcomeMsg").append(HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage));
+
+        $("#skillsStart").append(HTMLskillsStart.replace("%data%", HTMLskillsStart))
+        $("#skills").append(HTMLskills.replace("%data%", bio.skills));
+
+    },
+    displayFooter: function(){
+        $("#footerContacts").append(HTMLcontactGeneric.replace("%data%", bio.name));
+        $("#footerContacts").append(HTMLmobile.replace("%data%", bio.contacts.mobile));
+        $("#footerContacts").append(HTMLemail.replace("%data%", bio.contacts.email));
+        $("#footerContacts").append(HTMLtwitter.replace("%data%", bio.contacts.twitter));
+        $("#footerContacts").append(HTMLgithub.replace("%data%", bio.contacts.github));
+        $("#footerContacts").append(HTMLlocation.replace("%data%", bio.contacts.location));
 
     }
 }
@@ -57,7 +80,8 @@ var education = {
     schools: [],
     onlineCourses: [],
     display: function(){
-        var educationTitleNode = $("#educationTitle");
+        $("#educationTitle").after(HTMLschoolStart);
+        var educationTitleNode = $(".education-entry");
         for(var i = 0; i < this.schools.length; i++){
             var currSchool = this.schools[i];
             educationTitleNode
@@ -74,7 +98,8 @@ var education = {
 var work = {
     jobs: [],
     display: function(){
-        var workExperienceTitleNode = $("#workExperienceTitle");
+        $("#workExperienceTitle").after(HTMLworkStart);
+        var workExperienceTitleNode = $(".work-entry");
         for(var i = 0; i < this.jobs.length; i++){
             var currJob = this.jobs[i];
             workExperienceTitleNode
@@ -90,7 +115,8 @@ var work = {
 var projects = {
     projects: [],
     display: function(){
-    var projectTitleNode = $("#projectTitle");
+    $("#projectTitle").append(HTMLprojectStart);
+    var projectTitleNode = $(".project-entry");
     for(var i = 0; i < this.projects.length; i++){
         var currProject = this.projects[i];
         projectTitleNode
@@ -113,25 +139,13 @@ $(document).ready(function(){
     education.schools.push(education1);
     work.jobs.push(job);
     projects.projects.push(project);
-
-    $("#headerName").append(HTMLheaderName.replace("%data%", bio.name) + HTMLheaderRole.replace("%data%", bio.role));
-
-    $("#topContacts").append(HTMLcontactGeneric.replace("%data%", bio.name));
-    $("#topContacts").append(HTMLmobile.replace("%data%", bio.contacts.mobile));
-    $("#topContacts").append(HTMLemail.replace("%data%", bio.contacts.email));
-    $("#topContacts").append(HTMLtwitter.replace("%data%", bio.contacts.twitter));
-    $("#topContacts").append(HTMLgithub.replace("%data%", bio.contacts.github));
-    $("#topContacts").append(HTMLlocation.replace("%data%", bio.contacts.location));
-
-    $("#bioPic").append(HTMLbioPic.replace("%data%", bio.biopic));
-    $("#welcomeMsg").append(HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage));
-
-    $("#skillsStart").append(HTMLskillsStart.replace("%data%", HTMLskillsStart))
-    $("#skills").append(HTMLskills.replace("%data%", bio.skills));
-
-    $("#mapTitle").after(googleMap);
-
+    bio.display();
+    bio.displayFooter();
     work.display();
     projects.display();
     education.display();
+
+    $("#mapTitle").after(googleMap);
+
+    //set footer vars
 });
