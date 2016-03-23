@@ -129,6 +129,8 @@ $(document).ready(function(){
     $("#skillsStart").append(HTMLskillsStart.replace("%data%", HTMLskillsStart))
     $("#skills").append(HTMLskills.replace("%data%", bio.skills));
 
+    $("#mapTitle").after(googleMap);
+
     work.display();
     projects.display();
     education.display();

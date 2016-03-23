@@ -200,6 +200,7 @@ span {
   display: block;
   height: 100%;
   margin: 0 5%;
+  min-width: 400px;
 }
 
 #mapDiv {
