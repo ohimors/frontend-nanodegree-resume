@@ -20,6 +20,11 @@ module.exports = function (grunt){
 				config.jsSrcDir+'*.js'
 			]
 		},
+		"jsbeautifier" : {
+ 		   	files : ["js/*.js"],
+			options : {
+    		}
+		},
 		watch: {
 			files: config.scssDir+'style.scss',
 			tasks: ['sass']
@@ -27,9 +32,7 @@ module.exports = function (grunt){
 	});
 
 	grunt.registerTask('default',[
-		'sass',
-		'concat',
 		'jshint',
-		'watch'
+		'jsbeautifier'
 	]);
 };
