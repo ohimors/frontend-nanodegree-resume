@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f56c4ff4-5466-473b-bb42-75f9a8846c97" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style.css" afterPath="$PROJECT_DIR$/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/resumeBuilder.js" afterPath="$PROJECT_DIR$/js/resumeBuilder.js" />
-    </list>
+    <list default="true" id="f56c4ff4-5466-473b-bb42-75f9a8846c97" name="Default" comment="" />
     <ignored path="frontend-nanodegree-resume.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -93,7 +88,7 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="13" />
-    <option name="y" value="24" />
+    <option name="y" value="-876" />
     <option name="width" value="1099" />
     <option name="height" value="876" />
   </component>
@@ -423,7 +418,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="13" y="24" width="1099" height="876" extended-state="4" />
+    <frame x="13" y="-876" width="1099" height="876" extended-state="4" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20200182" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
