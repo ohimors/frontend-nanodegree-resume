@@ -16,7 +16,7 @@ var bio = {
         location: "Washington D.C."
     },
     welcomeMessage: "Welcome to Wildmind.",
-    skills: "Shadow Dom expert and passive cake eater",
+    skills: ["Shadow Dom expert", "passive cake eater"],
     biopic: "images/my_picture.jpg",
     display: function() {
         $("#headerName").append(HTMLheaderName.replace("%data%", bio.name) + HTMLheaderRole.replace("%data%", bio.role));
@@ -81,10 +81,20 @@ var education = {
         $("#educationTitle").after(HTMLschoolStart);
         var educationTitleNode = $(".education-entry");
         this.schools.forEach(function(currSchool){
+            var concatMajor = "";
+            currSchool.major.forEach(function (currMajor){
+                if(currMajor === currSchool.major[currSchool.major.length - 1]){
+                    concatMajor += currMajor;
+                }
+                else{
+                    concatMajor += currMajor + ",&nbsp; ";
+                }
+            });
+
             educationTitleNode
                 .append(HTMLschoolName.replace("%data%", currSchool.name) + HTMLschoolDegree.replace("%data%", currSchool.degree))
                 .append(HTMLschoolDates.replace("%data%", currSchool.dates))
-                .append(HTMLschoolMajor.replace("%data%", currSchool.major))
+                .append(HTMLschoolMajor.replace("%data%", concatMajor))
                 .append(HTMLschoolLocation.replace("%data%", currSchool.location));
         });
     }
@@ -127,7 +137,7 @@ var projects = {
 $(document).ready(function() {
     var job = new Job("employer1", "title1", "Washington d.c.", "2008-10-10", "description of job 1");
     var project = new Project("project1", "2012-05-05", "A really cool project", ["images/fry.jpg"]);
-    var education1 = new School("New York University", "New York, New York", "BS", "Computer Science", "2008-08", "https://nyu.edu");
+    var education1 = new School("New York University", "New York, New York", "BS", ["Computer Science","Economics"], "2008-08", "https://nyu.edu");
 
     education.schools.push(education1);
     work.jobs.push(job);
