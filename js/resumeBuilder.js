@@ -90,12 +90,19 @@ var education = {
                     concatMajor += currMajor + ",&nbsp; ";
                 }
             });
-
             educationTitleNode
                 .append(HTMLschoolName.replace("%data%", currSchool.name) + HTMLschoolDegree.replace("%data%", currSchool.degree))
                 .append(HTMLschoolDates.replace("%data%", currSchool.dates))
                 .append(HTMLschoolMajor.replace("%data%", concatMajor))
                 .append(HTMLschoolLocation.replace("%data%", currSchool.location));
+        });
+        $("#onlineTitle").after(HTMLonlineStart);
+        this.onlineCourses.forEach(function(currCourse){
+            var onlineTitleNode = $(".online-entry");
+            onlineTitleNode
+                .append(HTMLonlineTitle.replace("%data%", currCourse.title) + HTMLonlineSchool.replace("%data%", currCourse.school))
+                .append(HTMLonlineDates.replace("%data%", currCourse.date))
+                .append(HTMLonlineURL.replace("%data%", currCourse.url));
         });
     }
 
@@ -138,8 +145,10 @@ $(document).ready(function() {
     var job = new Job("employer1", "title1", "Washington d.c.", "2008-10-10", "description of job 1");
     var project = new Project("project1", "2012-05-05", "A really cool project", ["images/fry.jpg"]);
     var education1 = new School("New York University", "New York, New York", "BS", ["Computer Science","Economics"], "2008-08", "https://nyu.edu");
+    var onlineCourse = new OnlineCourse("Online Course", "Online School", ["2012-05-05"], "http://www.google.com");
 
     education.schools.push(education1);
+    education.onlineCourses.push(onlineCourse);
     work.jobs.push(job);
     projects.projects.push(project);
     bio.display();
